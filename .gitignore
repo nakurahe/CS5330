@@ -256,4 +256,7 @@ pip-selfcheck.json
 .history
 .ionide
 
+# Gradio temporary files
+.gradio
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,python,venv,visualstudiocode,jupyternotebooks,opencv
