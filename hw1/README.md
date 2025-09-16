@@ -3,7 +3,7 @@
 A sophisticated Python application that transforms images into artistic mosaics using **adaptive grid segmentation** and **advanced multi-metric tile matching**. Built with Gradio for an intuitive web interface.
 
 <div align="center">
-  <img src="public/title.png" alt="Interactive Mosaic Generator Example" width="600">
+  <img src="public/title.png" alt="Interactive Mosaic Generator Example">
 </div>
 
 ## 🎨 Features
