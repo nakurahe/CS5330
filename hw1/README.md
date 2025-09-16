@@ -1,3 +1,9 @@
+---
+title: Interactive_Image_Mosaic_Generator
+app_file: mosaic_generator.py
+sdk: gradio
+sdk_version: 5.45.0
+---
 # Interactive Image Mosaic Generator
 
 A sophisticated Python application that transforms images into artistic mosaics using **adaptive grid segmentation** and **advanced multi-metric tile matching**. Built with Gradio for an intuitive web interface.
