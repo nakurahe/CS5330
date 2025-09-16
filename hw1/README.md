@@ -2,6 +2,10 @@
 
 A sophisticated Python application that transforms images into artistic mosaics using **adaptive grid segmentation** and **advanced multi-metric tile matching**. Built with Gradio for an intuitive web interface.
 
+<div align="center">
+  <img src="public/title.png" alt="Interactive Mosaic Generator Example" width="600">
+</div>
+
 ## 🎨 Features
 
 ### Core Functionality
@@ -146,10 +150,37 @@ Access the web interface at `http://localhost:7860`
 
 ## 📊 Example Results
 
-The application processes various image types effectively:
-- **Portraits**: Preserves facial features with adaptive segmentation
-- **Landscapes**: Balances detail in complex areas with simplification in uniform regions
-- **Abstract Art**: Creates interesting interpretations with geometric patterns
+- Basic solid color mosaics
+<div align="center">
+  <img src="public/solid.webp" alt="Basic Solid Color Mosaic Example">
+</div>
+
+- Rough circle pattern mosaics
+<div align="center">
+  <img src="public/circle.webp" alt="Circle Pattern Mosaic Example">
+</div>
+
+</div>
+
+- Gradient vertical pattern mosaics
+<div align="center">
+  <img src="public/gradient_v.webp" alt="Gradient Vertical Pattern Mosaic Example">
+</div>
+
+- Mini-image mosaics
+<div align="center">
+  <img src="public/mini_image.webp" alt="Mini-Image Mosaic Example">
+</div>
+
+- Image tile mosaics with default settings
+<div align="center">
+  <img src="public/image_tiles_default.webp" alt="Image Tile Mosaic Example">
+</div>
+
+- Image tile mosaics with advanced matching
+<div align="center">
+  <img src="public/image_tiles_8_0.webp" alt="Advanced Image Tile Mosaic Example">
+</div>
 
 ## 📈 Future Enhancements
 
