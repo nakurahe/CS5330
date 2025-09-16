@@ -2,7 +2,6 @@ import gradio as gr
 import numpy as np
 import cv2
 from PIL import Image, ImageDraw
-import io
 from sklearn.cluster import KMeans
 from skimage.metrics import structural_similarity as ssim
 from typing import Tuple, List
@@ -25,11 +24,13 @@ class MosaicGenerator:
         patterns['solid'] = np.ones((size, size, 3), dtype=np.uint8) * 255
         
         # Gradient patterns
-        gradient_h = np.linspace(0, 255, size).reshape(1, -1)
-        gradient_v = np.linspace(0, 255, size).reshape(-1, 1)
+        # Horizontal gradient: each row is the same, columns vary
+        gradient_h_2d = np.tile(np.linspace(0, 255, size).reshape(1, -1), (size, 1))
+        patterns['gradient_h'] = np.stack([gradient_h_2d] * 3, axis=-1).astype(np.uint8)
         
-        patterns['gradient_h'] = np.stack([gradient_h] * size).astype(np.uint8)
-        patterns['gradient_v'] = np.stack([gradient_v] * size, axis=1).astype(np.uint8)
+        # Vertical gradient: each column is the same, rows vary
+        gradient_v_2d = np.tile(np.linspace(0, 255, size).reshape(-1, 1), (1, size))
+        patterns['gradient_v'] = np.stack([gradient_v_2d] * 3, axis=-1).astype(np.uint8)
         
         # Diagonal gradient
         diag = np.zeros((size, size))
@@ -138,8 +139,8 @@ class MosaicGenerator:
         return tile
     
     def create_pattern_tile(self, pattern_name: str, color: Tuple[int, int, int], 
-                           size: int) -> np.ndarray:
-        """Create a pattern tile tinted with the specified color."""
+                       size: int) -> np.ndarray:
+        """Create a pattern tile tinted with the specified color using HSV for better results."""
         # Get base pattern
         if pattern_name not in self.pattern_tiles:
             pattern_name = 'solid'
@@ -150,16 +151,20 @@ class MosaicGenerator:
         if base_pattern.shape[0] != size:
             base_pattern = cv2.resize(base_pattern, (size, size))
         
-        # Apply color tinting
-        # Convert color to HSV for better tinting
+        # Convert to HSV for better color tinting
         hsv_color = colorsys.rgb_to_hsv(color[0]/255, color[1]/255, color[2]/255)
         
-        # Create tinted version
-        tinted = base_pattern.astype(float) / 255.0
-        for i in range(3):
-            tinted[:, :, i] *= color[i] / 255.0
-            
-        return (tinted * 255).astype(np.uint8)
+        # Convert pattern to HSV
+        pattern_hsv = cv2.cvtColor(base_pattern, cv2.COLOR_RGB2HSV).astype(float)
+        
+        # Apply the hue and saturation from the target color, keep pattern's value (brightness)
+        pattern_hsv[:, :, 0] = hsv_color[0] * 179  # OpenCV uses 0-179 for hue
+        pattern_hsv[:, :, 1] = hsv_color[1] * 255 * (pattern_hsv[:, :, 2] / 255)  # Scale saturation by brightness
+        
+        # Convert back to RGB
+        tinted = cv2.cvtColor(pattern_hsv.astype(np.uint8), cv2.COLOR_HSV2RGB)
+        
+        return tinted
     
     def create_mini_image_tile(self, cell: np.ndarray, size: int) -> np.ndarray:
         """Create a tile by downsampling the original cell."""
@@ -212,61 +217,9 @@ class MosaicGenerator:
         gray2 = cv2.cvtColor(img2, cv2.COLOR_RGB2GRAY)
         return ssim(gray1, gray2)
     
-    def create_animation_frames(self, image: np.ndarray, segments: List[dict], 
-                              tile_type: str, pattern_type: str, 
-                              num_frames: int = 10) -> List[np.ndarray]:
-        """Create animation frames showing progressive mosaic building."""
-        frames = []
-        h, w = image.shape[:2]
-        
-        # Sort segments by size (larger first for better visual effect)
-        sorted_segments = sorted(segments, key=lambda x: x['size'], reverse=True)
-        
-        # Calculate segments per frame
-        segments_per_frame = max(1, len(sorted_segments) // num_frames)
-        
-        mosaic = np.zeros_like(image)
-        
-        for frame_idx in range(num_frames):
-            start_idx = frame_idx * segments_per_frame
-            end_idx = min(start_idx + segments_per_frame, len(sorted_segments))
-            
-            if frame_idx == num_frames - 1:
-                end_idx = len(sorted_segments)
-            
-            # Add segments for this frame
-            for segment in sorted_segments[start_idx:end_idx]:
-                x, y, size = segment['x'], segment['y'], segment['size']
-                cell = segment['cell']
-                
-                if cell.size == 0:
-                    continue
-                
-                avg_color = self.get_average_color(cell)
-                
-                if tile_type == 'solid':
-                    tile = self.create_color_tile(avg_color, size)
-                elif tile_type == 'pattern':
-                    tile = self.create_pattern_tile(pattern_type, avg_color, size)
-                elif tile_type == 'mini_image':
-                    tile = self.create_mini_image_tile(cell, size)
-                else:
-                    if np.random.random() > 0.5:
-                        tile = self.create_pattern_tile(pattern_type, avg_color, size)
-                    else:
-                        tile = self.create_color_tile(avg_color, size)
-                
-                actual_h = min(size, h - y)
-                actual_w = min(size, w - x)
-                mosaic[y:y+actual_h, x:x+actual_w] = tile[:actual_h, :actual_w]
-            
-            frames.append(mosaic.copy())
-        
-        return frames
     
     def process_image(self, input_image, apply_quantization, n_colors, base_grid_size,
-                     variance_threshold, tile_type, pattern_type, quality_priority,
-                     show_animation):
+                     variance_threshold, tile_type, pattern_type, quality_priority):
         """Main processing function for Gradio interface."""
         
         if input_image is None:
@@ -295,21 +248,8 @@ class MosaicGenerator:
                                                   variance_threshold)
         
         # Build mosaic
-        if show_animation:
-            frames = self.create_animation_frames(image, segments, tile_type, 
-                                                 pattern_type, num_frames=10)
-            # Create GIF
-            pil_frames = [Image.fromarray(frame) for frame in frames]
-            gif_buffer = io.BytesIO()
-            pil_frames[0].save(gif_buffer, format='GIF', save_all=True,
-                             append_images=pil_frames[1:], duration=200, loop=0)
-            gif_buffer.seek(0)
-            animation_output = gif_buffer
-            mosaic = frames[-1]
-        else:
-            mosaic = self.build_mosaic(image, segments, tile_type, pattern_type)
-            animation_output = None
-        
+        mosaic = self.build_mosaic(image, segments, tile_type, pattern_type)
+    
         self.mosaic_image = mosaic
         
         # Calculate metrics
@@ -317,93 +257,78 @@ class MosaicGenerator:
         ssim_score = self.calculate_ssim(image, mosaic)
         
         # Create side-by-side comparison
-        comparison = np.hstack([image, mosaic])
-        
-        # Add labels
+        comparison = np.hstack([image, mosaic])        
         comparison_pil = Image.fromarray(comparison)
-        draw = ImageDraw.Draw(comparison_pil)
         
-        # Info text
-        info_text = f"Segments: {len(segments)} | MSE: {mse:.2f} | SSIM: {ssim_score:.4f}"
-        
-        return mosaic, comparison_pil, animation_output, info_text, mse, ssim_score
-    
-    def export_mosaic(self):
-        """Export the current mosaic image."""
-        if self.mosaic_image is None:
-            return None
-        return Image.fromarray(self.mosaic_image)
+        return mosaic, comparison_pil, len(segments), mse, ssim_score
 
 # Create global instance
 mosaic_gen = MosaicGenerator()
 
 # Gradio Interface
 def create_interface():
-    with gr.Blocks(title="Interactive Image Mosaic Generator") as interface:
+    with gr.Blocks(title="Interactive Image Mosaic Generator") as demo:
         gr.Markdown("""
         # 🎨 Interactive Image Mosaic Generator
         
         Transform your images into beautiful mosaic art with adaptive gridding and various tile styles!
         """)
         
-        with gr.Row():
-            with gr.Column(scale=1):
-                # Input controls
-                input_image = gr.Image(label="Upload Image", type="pil")
-                
-                with gr.Accordion("Color Settings", open=True):
-                    apply_quantization = gr.Checkbox(label="Apply Color Quantization", 
-                                                    value=False)
-                    n_colors = gr.Slider(minimum=2, maximum=32, value=8, step=1,
-                                       label="Number of Colors (if quantization enabled)")
-                
-                with gr.Accordion("Grid Settings", open=True):
-                    base_grid_size = gr.Slider(minimum=8, maximum=64, value=32, step=8,
-                                              label="Base Grid Size")
-                    variance_threshold = gr.Slider(minimum=0, maximum=100, value=30, step=5,
-                                                  label="Subdivision Threshold (higher = more detail)")
-                
-                with gr.Accordion("Tile Settings", open=True):
-                    tile_type = gr.Radio(choices=["solid", "pattern", "mini_image"],
-                                       value="solid", label="Tile Type")
-                    pattern_type = gr.Dropdown(choices=["solid", "gradient_h", "gradient_v", 
-                                                       "gradient_diag", "circle", "cross"],
-                                              value="gradient_diag", label="Pattern Type (if pattern)")
-                
-                with gr.Accordion("Performance Settings", open=True):
-                    quality_priority = gr.Radio(choices=["Speed", "Quality"], 
-                                              value="Quality",
-                                              label="Processing Priority")
-                    show_animation = gr.Checkbox(label="Generate Building Animation", 
-                                                value=False)
-                
-                process_btn = gr.Button("Generate Mosaic", variant="primary")
-                export_btn = gr.Button("Export Mosaic", variant="secondary")
+        with gr.Row(scale=2):
+            # Input controls
+            input_image = gr.Image(label="Upload Image", type="pil")
+
+            # Output displays
+            with gr.Tab("Mosaic Result"):
+                mosaic_output = gr.Image(label="Mosaic Image")
             
-            with gr.Column(scale=2):
-                # Output displays
-                with gr.Tab("Mosaic Result"):
-                    mosaic_output = gr.Image(label="Mosaic Image")
-                
-                with gr.Tab("Side-by-Side Comparison"):
-                    comparison_output = gr.Image(label="Original vs Mosaic")
-                
-                with gr.Tab("Animation"):
-                    animation_output = gr.Image(label="Building Animation")
-                
-                # Metrics display
-                info_text = gr.Textbox(label="Processing Info", interactive=False)
-                
-                with gr.Row():
-                    mse_metric = gr.Number(label="MSE (Lower is better)", precision=2)
-                    ssim_metric = gr.Number(label="SSIM (Higher is better)", precision=4)
-        
+            with gr.Tab("Side-by-Side Comparison"):
+                comparison_output = gr.Image(label="Original vs Mosaic")
+
+        with gr.Row():
+            gr.Column(scale=1)  # Empty column for left spacing
+            process_btn = gr.Button("Generate Mosaic", variant="primary")
+            gr.Column(scale=1)  # Empty column for right spacing
+
+                    
+        with gr.Row(scale=3):
+            segments_count = gr.Number(label="Number of Segments", precision=0)
+            mse_metric = gr.Number(label="MSE (Lower is better)", precision=2)
+            ssim_metric = gr.Number(label="SSIM (Higher is better)", precision=4)
+    
+        with gr.Row():
+            # with gr.Column(scale=1):
+            with gr.Accordion("Color Settings", open=True):
+                apply_quantization = gr.Checkbox(label="Apply Color Quantization", 
+                                                value=False)
+                n_colors = gr.Slider(minimum=2, maximum=32, value=8, step=1,
+                                    label="Number of Colors (if quantization enabled)")
+            
+            with gr.Accordion("Grid Settings", open=True):
+                base_grid_size = gr.Slider(minimum=8, maximum=64, value=32, step=8,
+                                            label="Base Grid Size")
+                variance_threshold = gr.Slider(minimum=0, maximum=100, value=30, step=5,
+                                                label="Subdivision Threshold (higher = more detail)")
+            
+            with gr.Accordion("Tile Settings", open=True):
+                tile_type = gr.Radio(choices=["solid", "pattern", "mini_image"],
+                                    value="solid", label="Tile Type")
+                pattern_type = gr.Dropdown(choices=["solid", "gradient_h", "gradient_v", 
+                                                    "gradient_diag", "circle", "cross"],
+                                            value="gradient_diag", label="Pattern Type (if pattern)")
+            
+            with gr.Accordion("Performance Settings", open=True):
+                quality_priority = gr.Radio(choices=["Speed", "Quality"], 
+                                            value="Quality",
+                                            label="Processing Priority")            
+            
         # Example images
         gr.Examples(
             examples=[
-                ["examples/landscape.jpg"],
-                ["examples/portrait.jpg"],
-                ["examples/abstract.jpg"]
+                ["examples/sphynx_cat_0.png"],
+                ["examples/sphynx_cat_1.jpg"],
+                ["examples/cat_sakura_cut_female.png"],
+                ["examples/cat_sakura_cut_male.png"]
             ],
             inputs=input_image,
             label="Sample Images"
@@ -413,39 +338,33 @@ def create_interface():
         process_btn.click(
             fn=mosaic_gen.process_image,
             inputs=[input_image, apply_quantization, n_colors, base_grid_size,
-                   variance_threshold, tile_type, pattern_type, quality_priority,
-                   show_animation],
-            outputs=[mosaic_output, comparison_output, animation_output, 
-                    info_text, mse_metric, ssim_metric]
+                   variance_threshold, tile_type, pattern_type, quality_priority],
+            outputs=[mosaic_output, comparison_output, segments_count, mse_metric, ssim_metric]
         )
         
-        export_btn.click(
-            fn=mosaic_gen.export_mosaic,
-            inputs=[],
-            outputs=[gr.File(label="Download Mosaic")]
-        )
-        
-        gr.Markdown("""
-        ## 📝 Instructions
-        
-        1. **Upload an image** using the input panel
-        2. **Adjust settings** to control the mosaic style:
-           - **Color Quantization**: Reduce colors for a more stylized look
-           - **Grid Size**: Larger = fewer, bigger tiles
-           - **Subdivision Threshold**: Higher values create more detail in complex areas
-           - **Tile Type**: Choose between solid colors, patterns, or mini-images
-        3. **Click "Generate Mosaic"** to create your artwork
-        4. **View results** in different tabs and check quality metrics
-        5. **Export** your mosaic when satisfied
-        
-        ## 🎯 Tips
-        - Start with default settings and adjust gradually
-        - Use color quantization for a more artistic effect
-        - Lower subdivision threshold for abstract style
-        - Try different tile types for unique effects
-        """)
+        with gr.Row():
+            gr.Markdown("""
+            ## 📝 Instructions
+            
+            1. **Upload an image** using the input panel
+            2. **Adjust settings** to control the mosaic style:
+                - **Color Quantization**: Reduce colors for a more stylized look
+                - **Grid Size**: Larger = fewer, bigger tiles
+                - **Subdivision Threshold**: Higher values create more detail in complex areas
+                - **Tile Type**: Choose between solid colors, patterns, or mini-images
+            3. **Click "Generate Mosaic"** to create your artwork
+            4. **View results** in different tabs and check quality metrics
+            """)
+            
+            gr.Markdown("""
+            ## 🎯 Tips
+            - Start with default settings and adjust gradually
+            - Use color quantization for a more artistic effect
+            - Lower subdivision threshold for abstract style
+            - Try different tile types for unique effects
+            """)
     
-    return interface
+    return demo
 
 # Launch the application
 if __name__ == "__main__":
@@ -456,5 +375,5 @@ if __name__ == "__main__":
         print("Please add sample images to the 'examples' directory")
     
     # Create and launch interface
-    interface = create_interface()
-    interface.launch(share=True, debug=True)
+    demo = create_interface()
+    demo.launch(share=True, debug=True)
