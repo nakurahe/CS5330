@@ -1,11 +1,15 @@
 import gradio as gr
 import numpy as np
 import cv2
-from PIL import Image, ImageDraw
+from PIL import Image
 from sklearn.cluster import KMeans
 from skimage.metrics import structural_similarity as ssim
-from typing import Tuple, List
+from typing import Tuple, List, Optional
 import colorsys
+import os
+import glob
+import os
+
 
 class MosaicGenerator:
     """Interactive Image Mosaic Generator with adaptive gridding and multiple tile options."""
@@ -15,6 +19,7 @@ class MosaicGenerator:
         self.mosaic_image = None
         self.tile_cache = {}
         self.pattern_tiles = self.generate_pattern_tiles()
+        self.tile_images = self.load_tile_images()
         
     def generate_pattern_tiles(self, size: int = 32) -> dict:
         """Generate a set of pattern tiles for mosaic creation."""
@@ -60,6 +65,41 @@ class MosaicGenerator:
                 patterns[key] = np.stack([patterns[key]] * 3, axis=-1)
                 
         return patterns
+    
+    def load_tile_images(self) -> List[np.ndarray]:
+        """Load a set of small images to use as mosaic tiles."""
+        tile_images = []
+        
+        # Define directories to search for tile images
+        tile_dirs = ['tile_images']
+        image_extensions = ['*.jpg', '*.jpeg', '*.png', '*.bmp', '*.tiff']
+        
+        for tile_dir in tile_dirs:
+            if os.path.exists(tile_dir):
+                for ext in image_extensions:
+                    pattern = os.path.join(tile_dir, ext)
+                    for image_path in glob.glob(pattern):
+                        try:
+                            # Load and resize image
+                            img = cv2.imread(image_path)
+                            if img is not None:
+                                img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+                                # Resize to standard tile size
+                                img = cv2.resize(img, (32, 32), interpolation=cv2.INTER_AREA)
+                                tile_images.append(img)
+                        except Exception as e:
+                            print(f"Warning: Could not load tile image {image_path}: {e}")
+        
+        # If no images found, create some default tile patterns
+        if not tile_images:
+            print("No tile images found. Using default patterns as backup.")
+            # Use pattern tiles as backup
+            for pattern_name, pattern in self.pattern_tiles.items():
+                if pattern_name != 'solid':
+                    tile_images.append(pattern)
+        
+        print(f"Loaded {len(tile_images)} tile images")
+        return tile_images
     
     def quantize_colors(self, image: np.ndarray, n_colors: int) -> np.ndarray:
         """Apply K-means color quantization to reduce color palette."""
@@ -175,6 +215,114 @@ class MosaicGenerator:
         tile = cv2.resize(small, (size, size), interpolation=cv2.INTER_NEAREST)
         return tile
     
+    def find_best_tile_by_content(self, cell: np.ndarray, target_color: Tuple[int, int, int]) -> np.ndarray:
+        """Advanced content-based tile matching with multiple similarity metrics."""
+        if not self.tile_images:
+            return None
+            
+        # Resize cell to standard tile size for comparison
+        cell_resized = cv2.resize(cell, (32, 32), interpolation=cv2.INTER_AREA)
+        
+        best_tile = None
+        best_score = -1
+        
+        target_array = np.array(target_color)
+        
+        for tile in self.tile_images:
+            # 1. Template matching score (structural similarity)
+            template_result = cv2.matchTemplate(cell_resized, tile, cv2.TM_CCOEFF_NORMED)
+            template_score = np.max(template_result)
+            
+            # 2. Color similarity score
+            tile_avg_color = np.mean(tile.reshape(-1, 3), axis=0)
+            color_distance = np.linalg.norm(tile_avg_color - target_array)
+            # Normalize to 0-1 range (closer to 1 is better)
+            color_score = max(0, 1 - (color_distance / 255.0))
+            
+            # 3. Histogram correlation score
+            cell_hist = cv2.calcHist([cell_resized], [0, 1, 2], None, [8, 8, 8], [0, 256, 0, 256, 0, 256])
+            tile_hist = cv2.calcHist([tile], [0, 1, 2], None, [8, 8, 8], [0, 256, 0, 256, 0, 256])
+            hist_score = cv2.compareHist(cell_hist, tile_hist, cv2.HISTCMP_CORREL)
+            hist_score = max(0, hist_score)  # Ensure non-negative
+            
+            # 4. Texture similarity using standard deviation
+            cell_gray = cv2.cvtColor(cell_resized, cv2.COLOR_RGB2GRAY)
+            tile_gray = cv2.cvtColor(tile, cv2.COLOR_RGB2GRAY)
+            cell_std = np.std(cell_gray)
+            tile_std = np.std(tile_gray)
+            texture_score = 1 - abs(cell_std - tile_std) / 128.0  # Normalize by max possible std diff
+            texture_score = max(0, texture_score)
+            
+            # Combined weighted score
+            # Weights: template=40%, color=30%, histogram=20%, texture=10%
+            combined_score = (0.4 * template_score + 
+                            0.3 * color_score + 
+                            0.2 * hist_score + 
+                            0.1 * texture_score)
+            
+            if combined_score > best_score:
+                best_score = combined_score
+                best_tile = tile
+        
+        # print(f"Best tile found with combined score: {best_score:.3f}")
+        return best_tile.copy() if best_tile is not None else None
+
+    def find_best_tile_by_color(self, target_color: Tuple[int, int, int]) -> np.ndarray:
+        """Find the tile image with closest average color to target."""
+        if not self.tile_images:
+            return None
+            
+        best_tile = None
+        best_distance = float('inf')
+        
+        target_array = np.array(target_color)
+        
+        for tile in self.tile_images:
+            # Calculate average color of this tile
+            tile_avg_color = np.mean(tile.reshape(-1, 3), axis=0)
+            # Euclidean distance in RGB space
+            distance = np.linalg.norm(tile_avg_color - target_array)
+            
+            if distance < best_distance:
+                best_distance = distance
+                best_tile = tile
+        
+        return best_tile.copy() if best_tile is not None else None
+
+    def create_image_tile(self, color: Tuple[int, int, int], size: int, cell: Optional[np.ndarray] = None) -> np.ndarray:
+        """Create a tile using the most advanced hybrid approach: template matching + color similarity fallback."""
+        if not self.tile_images:
+            # Fallback to solid color if no images available
+            return self.create_color_tile(color, size)
+        
+        # Use advanced content-based approach for best quality
+        if cell is not None and cell.size > 0:
+            tile_img = self.find_best_tile_by_content(cell, color)
+        else:
+            # If no cell data available, use color similarity only
+            tile_img = self.find_best_tile_by_color(color)
+            
+        if tile_img is None:
+            return self.create_color_tile(color, size)
+        
+        # Resize to required size
+        if tile_img.shape[0] != size or tile_img.shape[1] != size:
+            tile_img = cv2.resize(tile_img, (size, size), interpolation=cv2.INTER_AREA)
+        
+        # Optional: Tint the image with the average color for better blending
+        # Convert to HSV for color adjustment
+        avg_brightness = np.mean(color) / 255.0
+        tile_hsv = cv2.cvtColor(tile_img, cv2.COLOR_RGB2HSV).astype(float)
+        
+        # Adjust the brightness to match the cell's average brightness
+        tile_hsv[:, :, 2] = tile_hsv[:, :, 2] * (0.5 + 0.5 * avg_brightness)
+        tile_hsv[:, :, 2] = np.clip(tile_hsv[:, :, 2], 0, 255)
+        
+        # Convert back to RGB
+        tile_img = cv2.cvtColor(tile_hsv.astype(np.uint8), cv2.COLOR_HSV2RGB)
+        
+        return tile_img
+    
     def build_mosaic(self, image: np.ndarray, segments: List[dict], 
                     tile_type: str, pattern_type: str = 'solid') -> np.ndarray:
         """Build the mosaic image from segments."""
@@ -196,8 +344,12 @@ class MosaicGenerator:
                 tile = self.create_color_tile(avg_color, size)
             elif tile_type == 'pattern':
                 tile = self.create_pattern_tile(pattern_type, avg_color, size)
-            else:  # mini_image
+            elif tile_type == 'mini_image':
                 tile = self.create_mini_image_tile(cell, size)
+            elif tile_type == 'image_tiles':
+                tile = self.create_image_tile(avg_color, size, cell)  # Pass cell for template matching
+            else:  # fallback to solid
+                tile = self.create_color_tile(avg_color, size)
             
             # Place tile in mosaic
             actual_h = min(size, h - y)
@@ -308,10 +460,10 @@ def create_interface():
                 base_grid_size = gr.Slider(minimum=8, maximum=64, value=32, step=8,
                                             label="Base Grid Size")
                 variance_threshold = gr.Slider(minimum=0, maximum=100, value=30, step=5,
-                                                label="Subdivision Threshold (higher = more detail)")
+                                                label="Subdivision Threshold (higher = more mosaics)")
             
             with gr.Accordion("Tile Settings", open=True):
-                tile_type = gr.Radio(choices=["solid", "pattern", "mini_image"],
+                tile_type = gr.Radio(choices=["solid", "pattern", "mini_image", "image_tiles"],
                                     value="solid", label="Tile Type")
                 pattern_type = gr.Dropdown(choices=["solid", "gradient_h", "gradient_v", 
                                                     "gradient_diag", "circle", "cross"],
@@ -351,29 +503,31 @@ def create_interface():
                 - **Color Quantization**: Reduce colors for a more stylized look
                 - **Grid Size**: Larger = fewer, bigger tiles
                 - **Subdivision Threshold**: Higher values create more detail in complex areas
-                - **Tile Type**: Choose between solid colors, patterns, or mini-images
+                - **Tile Type**: Choose between solid colors, patterns, mini-images, or image tiles
             3. **Click "Generate Mosaic"** to create your artwork
             4. **View results** in different tabs and check quality metrics
             """)
             
             gr.Markdown("""
-            ## 🎯 Tips
-            - Start with default settings and adjust gradually
-            - Use color quantization for a more artistic effect
-            - Lower subdivision threshold for abstract style
-            - Try different tile types for unique effects
-            """)
+        ## 🎯 Tips
+        - Start with default settings and adjust gradually
+        - Use color quantization for a more artistic effect
+        - Lower subdivision threshold for abstract style
+        - Try different tile types for unique effects
+        - For **image tiles**: Place small images in the `tile_images/` directory
+        """)
     
     return demo
 
 # Launch the application
 if __name__ == "__main__":
-    # Create example images directory (you'll need to add actual images)
-    import os
+    # Create example images directory
     if not os.path.exists("examples"):
         os.makedirs("examples")
         print("Please add sample images to the 'examples' directory")
     
-    # Create and launch interface
+    if not os.path.exists("tile_images"):
+        os.makedirs("tile_images")
+        print("Created 'tile_images' directory - add small images here for image tile mosaics")    # Create and launch interface
     demo = create_interface()
     demo.launch(share=True, debug=True)
