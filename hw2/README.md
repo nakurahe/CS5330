@@ -8,6 +8,12 @@ sdk_version: 5.49.0
 
 **Can you outsmart AI at detecting AI-generated faces?** An interactive game where humans compete head-to-head against a trained deep learning model!
 
+<div align="center">
+  <img src="game_ui.png" alt="Game UI"/>
+</div>
+
+Play the game here: [AI vs Human Face Detection Challenge](https://huggingface.co/spaces/nyakura/AI_Human_Face_Detection)
+
 ## 🎮 Quick Start
 
 1. **Set Rounds**: Choose 1-100 rounds to play
