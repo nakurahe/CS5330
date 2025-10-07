@@ -1,0 +1,12 @@
+# Hugging Face Spaces specific ignore file
+.venv/
+venv/
+.git/
+.gradio/
+.cache/
+.DS_Store
+*.ipynb
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+README.md

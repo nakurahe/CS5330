@@ -5,7 +5,7 @@ A fun interactive game where humans compete against AI to detect AI-generated fa
 
 import gradio as gr
 import numpy as np
-import tensorflow as tf
+import keras
 from PIL import Image
 import os
 import random
@@ -18,7 +18,7 @@ import random
 MODEL_PATH = "best_mobilenet_finetuned.keras"
 if os.path.exists(MODEL_PATH):
     # Load model without recompiling to avoid shape mismatch issues
-    model = tf.keras.models.load_model(MODEL_PATH, compile=False)
+    model = keras.models.load_model(MODEL_PATH, compile=False)
     print(f"✅ Model loaded from {MODEL_PATH}")
 else:
     print(f"⚠️ Model not found at {MODEL_PATH}. Please ensure the model file exists.")
@@ -562,5 +562,5 @@ if __name__ == "__main__":
     demo.launch(
         share=True,  # Creates a public link
         server_name="0.0.0.0",  # Allows external connections
-        server_port=15  # Default Gradio port
+        server_port=7860  # Default Gradio port
     )

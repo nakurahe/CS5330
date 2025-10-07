@@ -1,3 +1,9 @@
+---
+title: AI_Human_Face_Detection
+app_file: app.py
+sdk: gradio
+sdk_version: 5.49.0
+---
 # AI vs Human Face Detection Challenge
 
 **Can you outsmart AI at detecting AI-generated faces?** An interactive game where humans compete head-to-head against a trained deep learning model!
