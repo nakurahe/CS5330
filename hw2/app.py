@@ -25,13 +25,13 @@ else:
     model = None
 
 # Load test images
-TEST_IMAGES_DIR = "real_and_AI"
+TEST_IMAGES_DIR = "test_images"
 image_files = []
 image_labels = {}
 
 if os.path.exists(TEST_IMAGES_DIR):
     # Load real images
-    real_dir = os.path.join(TEST_IMAGES_DIR, "test_real")
+    real_dir = os.path.join(TEST_IMAGES_DIR, "real")
     if os.path.exists(real_dir):
         real_images = [os.path.join(real_dir, f) for f in os.listdir(real_dir) 
                       if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
@@ -40,7 +40,7 @@ if os.path.exists(TEST_IMAGES_DIR):
             image_labels[img] = 1  # 1 = Real
     
     # Load AI-generated images
-    ai_dir = os.path.join(TEST_IMAGES_DIR, "test_AI")
+    ai_dir = os.path.join(TEST_IMAGES_DIR, "ai")
     if os.path.exists(ai_dir):
         ai_images = [os.path.join(ai_dir, f) for f in os.listdir(ai_dir) 
                     if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
@@ -107,15 +107,6 @@ def get_ai_prediction(img_path):
     except Exception as e:
         print(f"Error predicting: {e}")
         return 0.5
-
-def get_accuracy_color(accuracy):
-    """Get color based on accuracy"""
-    if accuracy >= 80:
-        return "🟢"
-    elif accuracy >= 60:
-        return "🟡"
-    else:
-        return "🔴"
 
 def create_horizontal_progress_html(player, results, max_rounds, winner_emoji=""):
     """Create HTML for horizontal progress bar with colored blocks"""
