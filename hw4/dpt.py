@@ -758,7 +758,8 @@ def process_spatial_photo(input_image, parallax_strength, aperture_f_number, num
             duration = duration * (file_size_mb / 4.5)
             imageio.mimsave(gif_path, frames, duration=duration, loop=0)
         
-        return depth_map_vis, foreground_img, clean_bg, gif_path
+        # Return the same path for both display and download
+        return depth_map_vis, foreground_img, clean_bg, gif_path, gif_path
         
     except Exception as e:
         print(f"Error processing image: {str(e)}")
@@ -785,15 +786,16 @@ with gr.Blocks(title="Spatial Photo Effect Generator", theme=gr.themes.Soft()) a
             gr.Markdown("### 📊 Results")
             
             with gr.Tab("Final Animation"):
+                output_gif_display = gr.Image(label="Animated GIF Preview", type="filepath")
                 output_gif = gr.File(label="Download GIF", file_types=[".gif"])
-                gr.Markdown("*Right-click and save, or click to download*")
+                gr.Markdown("*Click the download icon above or right-click the preview to save*")
             
             with gr.Tab("Processing Steps"):
                 with gr.Row():
-                    depth_output = gr.Image(label="Depth Map", type="numpy")
-                    foreground_output = gr.Image(label="Foreground (Sharp)", type="numpy")
+                    depth_output = gr.Image(label="Depth Map", type="numpy", show_label=True)
+                    foreground_output = gr.Image(label="Foreground (Sharp)", type="numpy", show_label=True)
                 with gr.Row():
-                    background_output = gr.Image(label="Background (Inpainted)", type="numpy")
+                    background_output = gr.Image(label="Background (Inpainted)", type="numpy", show_label=True)
     
     gr.Markdown("### ⚙️ Parameters")
     
@@ -866,7 +868,7 @@ with gr.Blocks(title="Spatial Photo Effect Generator", theme=gr.themes.Soft()) a
     process_btn.click(
         fn=process_spatial_photo,
         inputs=[input_img, parallax_slider, aperture_slider, frames_slider, animation_style],
-        outputs=[depth_output, foreground_output, background_output, output_gif]
+        outputs=[depth_output, foreground_output, background_output, output_gif_display, output_gif]
     )
 
 print("\n✨ Gradio interface configured!")
