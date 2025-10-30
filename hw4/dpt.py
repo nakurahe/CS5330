@@ -780,44 +780,6 @@ with gr.Blocks(title="Spatial Photo Effect Generator", theme=gr.themes.Soft()) a
         with gr.Column(scale=1):
             gr.Markdown("### 📤 Input")
             input_img = gr.Image(label="Upload Image", type="pil", height=300)
-            
-            gr.Markdown("### ⚙️ Parameters")
-            
-            parallax_slider = gr.Slider(
-                minimum=1.0,
-                maximum=3.0,
-                value=1.5,
-                step=0.1,
-                label="Parallax Strength",
-                info="How much the foreground/background move differently (1.0=subtle, 3.0=dramatic)"
-            )
-            
-            aperture_slider = gr.Slider(
-                minimum=1.4,
-                maximum=5.6,
-                value=2.8,
-                step=0.2,
-                label="Aperture (f-stop)",
-                info="Camera aperture simulation (f/1.4=heavy blur, f/5.6=light blur)"
-            )
-            
-            frames_slider = gr.Slider(
-                minimum=15,
-                maximum=60,
-                value=30,
-                step=5,
-                label="Animation Frames",
-                info="More frames = smoother but larger file"
-            )
-            
-            animation_style = gr.Radio(
-                choices=["Back and Forth", "Continuous Loop"],
-                value="Back and Forth",
-                label="Animation Style",
-                info="Back and Forth: ping-pong motion, Continuous Loop: circular motion"
-            )
-            
-            process_btn = gr.Button("✨ Generate Spatial Photo", variant="primary", size="lg")
         
         with gr.Column(scale=2):
             gr.Markdown("### 📊 Results")
@@ -833,6 +795,45 @@ with gr.Blocks(title="Spatial Photo Effect Generator", theme=gr.themes.Soft()) a
                 with gr.Row():
                     background_output = gr.Image(label="Background (Inpainted)", type="numpy")
     
+    gr.Markdown("### ⚙️ Parameters")
+    
+    with gr.Row():
+        parallax_slider = gr.Slider(
+            minimum=1.0,
+            maximum=3.0,
+            value=1.5,
+            step=0.1,
+            label="Parallax Strength",
+            info="How much the foreground/background move differently (1.0=subtle, 3.0=dramatic)"
+        )
+        
+        aperture_slider = gr.Slider(
+            minimum=1.4,
+            maximum=5.6,
+            value=2.8,
+            step=0.2,
+            label="Aperture (f-stop)",
+            info="Camera aperture simulation (f/1.4=heavy blur, f/5.6=light blur)"
+        )
+        
+        frames_slider = gr.Slider(
+            minimum=15,
+            maximum=60,
+            value=30,
+            step=5,
+            label="Animation Frames",
+            info="More frames = smoother but larger file"
+        )
+        
+        animation_style = gr.Radio(
+            choices=["Back and Forth", "Continuous Loop"],
+            value="Back and Forth",
+            label="Animation Style",
+            info="Back and Forth: ping-pong motion, Continuous Loop: circular motion"
+        )
+    
+    process_btn = gr.Button("✨ Generate Spatial Photo", variant="primary", size="lg")
+
     # Examples
     gr.Markdown("### 🎯 Try These Examples")
     gr.Examples(
@@ -875,9 +876,6 @@ print("Launching web interface...")
 demo.launch(
     share=False,  # Set to True to create a public link
     show_error=True,
-    server_name="0.0.0.0",
+    server_name="localhost",
     server_port=7860
 )
-
-print("\n🎉 Spatial Photo Pipeline Complete!")
-print("Interface is now running. Check your browser!")
