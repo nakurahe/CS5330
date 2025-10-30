@@ -787,8 +787,8 @@ with gr.Blocks(title="Spatial Photo Effect Generator", theme=gr.themes.Soft()) a
             
             with gr.Tab("Final Animation"):
                 output_gif_display = gr.Image(label="Animated GIF Preview", type="filepath")
-                output_gif = gr.File(label="Download GIF", file_types=[".gif"])
-                gr.Markdown("*Click the download icon above or right-click the preview to save*")
+                output_gif = gr.File(label="Download GIF", file_types=[".gif"], visible=False)
+                gr.Markdown("*Click the download icon above or right-click the preview to save*", visible=False, elem_id="download-hint")
             
             with gr.Tab("Processing Steps"):
                 with gr.Row():
@@ -865,10 +865,16 @@ with gr.Blocks(title="Spatial Photo Effect Generator", theme=gr.themes.Soft()) a
     )
     
     # Connect the button
+    def process_and_show(input_img, parallax_slider, aperture_slider, frames_slider, animation_style):
+        """Wrapper function to process and make download visible"""
+        results = process_spatial_photo(input_img, parallax_slider, aperture_slider, frames_slider, animation_style)
+        # Return results + update visibility of download section
+        return results + (gr.update(visible=True),)
+    
     process_btn.click(
-        fn=process_spatial_photo,
+        fn=process_and_show,
         inputs=[input_img, parallax_slider, aperture_slider, frames_slider, animation_style],
-        outputs=[depth_output, foreground_output, background_output, output_gif_display, output_gif]
+        outputs=[depth_output, foreground_output, background_output, output_gif_display, output_gif, output_gif]
     )
 
 print("\n✨ Gradio interface configured!")
