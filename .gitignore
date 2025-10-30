@@ -260,3 +260,5 @@ pip-selfcheck.json
 .gradio
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,python,venv,visualstudiocode,jupyternotebooks,opencv
+
+*.gif
