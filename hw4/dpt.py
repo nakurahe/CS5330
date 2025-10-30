@@ -31,7 +31,7 @@ print(f"Model loaded on {device}")
 # Load and Prepare Your Image
 # ============================================
 # Load from URL
-image_url = "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg"
+image_url = "https://cdn.mos.cms.futurecdn.net/zXg53zZKGbh2ftFt7hkAMH-1200-80.jpg.webp"
 image = Image.open(requests.get(image_url, stream=True).raw).convert('RGB')
 
 # Resize for faster processing (optional but recommended)
@@ -587,9 +587,151 @@ print("\n" + "="*50)
 print("Setting up Gradio Interface...")
 print("="*50)
 
-def process_spatial_photo(input_image, parallax_strength, aperture_f_number, num_animation_frames, animation_style):
+def create_bokeh_kernel(size, shape='circular'):
     """
-    Main processing function for the Gradio interface.
+    Create custom bokeh kernel shapes.
+    
+    Args:
+        size: Kernel size (odd number)
+        shape: 'circular', 'hexagonal', or 'heart'
+    
+    Returns:
+        Normalized kernel
+    """
+    if size % 2 == 0:
+        size += 1
+    
+    kernel = np.zeros((size, size), dtype=np.float32)
+    center = size // 2
+    
+    if shape == 'circular':
+        # Standard circular bokeh
+        y, x = np.ogrid[-center:center+1, -center:center+1]
+        mask = x*x + y*y <= center*center
+        kernel[mask] = 1
+    
+    elif shape == 'hexagonal':
+        # Hexagonal bokeh (like camera aperture)
+        points = []
+        radius = center * 0.9
+        for i in range(6):
+            angle = i * np.pi / 3
+            x = int(center + radius * np.cos(angle))
+            y = int(center + radius * np.sin(angle))
+            points.append([x, y])
+        points = np.array(points, dtype=np.int32)
+        cv2.fillPoly(kernel, [points], 1)
+    
+    elif shape == 'heart':
+        # Heart-shaped bokeh
+        for y in range(size):
+            for x in range(size):
+                # Normalize coordinates to [-1, 1]
+                nx = (x - center) / center
+                ny = (center - y) / center  # Flip y
+                # Heart equation
+                if nx*nx + ny*ny - 1 <= 0:
+                    val = (nx*nx + ny*ny + 2*ny - 1)
+                    if val <= 0:
+                        kernel[y, x] = 1
+    
+    # Normalize
+    if kernel.sum() > 0:
+        kernel = kernel / kernel.sum()
+    else:
+        kernel[center, center] = 1
+    
+    return kernel
+
+def apply_custom_bokeh_blur(image, depth_map, foreground_mask, aperture_config, bokeh_shape='circular'):
+    """
+    Apply depth-of-field blur with custom bokeh shapes.
+    """
+    blur_intensity_map = 1.0 - depth_map
+    fg_mask_float = (foreground_mask / 255.0)
+    blur_intensity_map = blur_intensity_map * (1.0 - fg_mask_float)
+    blur_intensity_map = cv2.GaussianBlur(blur_intensity_map.astype(np.float32), (21, 21), 0)
+    blur_intensity_map = blur_intensity_map * aperture_config['intensity']
+    
+    max_kernel = aperture_config['max_kernel']
+    
+    # Create blur levels with custom bokeh
+    blur_levels = []
+    kernel_sizes = [1, 7, 13, 19, max_kernel]
+    
+    for ksize in kernel_sizes:
+        if ksize == 1:
+            blur_levels.append(image.copy())
+        else:
+            ksize = ksize if ksize % 2 == 1 else ksize + 1
+            if bokeh_shape == 'circular':
+                blurred = cv2.GaussianBlur(image, (ksize, ksize), 0)
+            else:
+                # Apply custom bokeh kernel
+                kernel = create_bokeh_kernel(ksize, bokeh_shape)
+                kernel_3d = kernel[:, :, np.newaxis]
+                blurred = cv2.filter2D(image, -1, kernel)
+            blur_levels.append(blurred)
+    
+    # Blend blur levels based on depth
+    result = np.zeros_like(image, dtype=np.float32)
+    
+    for y in range(image.shape[0]):
+        for x in range(image.shape[1]):
+            intensity = blur_intensity_map[y, x]
+            
+            if intensity < 0.01:
+                result[y, x] = blur_levels[0][y, x]
+            elif intensity < 0.25:
+                alpha = (intensity - 0.01) / 0.24
+                result[y, x] = (1 - alpha) * blur_levels[0][y, x] + alpha * blur_levels[1][y, x]
+            elif intensity < 0.5:
+                alpha = (intensity - 0.25) / 0.25
+                result[y, x] = (1 - alpha) * blur_levels[1][y, x] + alpha * blur_levels[2][y, x]
+            elif intensity < 0.75:
+                alpha = (intensity - 0.5) / 0.25
+                result[y, x] = (1 - alpha) * blur_levels[2][y, x] + alpha * blur_levels[3][y, x]
+            else:
+                alpha = (intensity - 0.75) / 0.25
+                result[y, x] = (1 - alpha) * blur_levels[3][y, x] + alpha * blur_levels[4][y, x]
+    
+    return result.astype(np.uint8)
+
+
+
+def apply_zoom_effect(image, zoom_factor, center=None):
+    """
+    Apply zoom effect to image.
+    
+    Args:
+        image: Input image
+        zoom_factor: Zoom factor (1.0 = no zoom, >1.0 = zoom in)
+        center: Zoom center (None = image center)
+    
+    Returns:
+        Zoomed image
+    """
+    height, width = image.shape[:2]
+    
+    if center is None:
+        center = (width / 2, height / 2)
+    
+    # Create zoom matrix (combines rotation and scale)
+    zoom_matrix = cv2.getRotationMatrix2D(center, 0, zoom_factor)
+    
+    # Adjust translation to keep image centered
+    zoom_matrix[0, 2] += (width / 2) - center[0]
+    zoom_matrix[1, 2] += (height / 2) - center[1]
+    
+    zoomed = cv2.warpAffine(image, zoom_matrix, (width, height), 
+                            borderMode=cv2.BORDER_REPLICATE)
+    
+    return zoomed
+
+def process_spatial_photo(input_image, parallax_strength, aperture_f_number, num_animation_frames, 
+                         animation_style, bokeh_shape, enable_zoom, bokeh_strength_mult):
+    """
+    Main processing function for the Gradio interface with advanced features.
     
     Args:
         input_image: PIL Image or numpy array
@@ -597,12 +739,12 @@ def process_spatial_photo(input_image, parallax_strength, aperture_f_number, num
         aperture_f_number: Float (1.4 to 5.6) - f-stop value
         num_animation_frames: Int (15 to 60) - number of frames
         animation_style: String - "Back and Forth" or "Continuous Loop"
+        bokeh_shape: String - "Circular", "Hexagonal", or "Heart"
+        enable_zoom: Bool - enable dynamic zoom effect
+        bokeh_strength_mult: Float (0.5 to 2.0) - bokeh strength multiplier
     
     Returns:
-        depth_map_vis: Depth map visualization
-        foreground_img: Extracted foreground
-        background_img: Clean background
-        gif_path: Path to generated GIF
+        depth_map_vis, foreground_img, background_img, gif_path (x2)
     """
     try:
         # Convert input to PIL Image if needed
@@ -692,12 +834,15 @@ def process_spatial_photo(input_image, parallax_strength, aperture_f_number, num
         
         aperture_conf = {
             'max_kernel': max_kernel,
-            'intensity': intensity * 0.8 + 0.2  # 0.2 to 1.0
+            'intensity': (intensity * 0.8 + 0.2) * bokeh_strength_mult  # Apply strength multiplier
         }
         
         # Calculate shifts based on parallax strength
         fg_max_shift = int(10 * parallax_strength)
         bg_max_shift = int(3 * parallax_strength)
+        
+        # Convert bokeh shape to lowercase
+        bokeh_shape_lower = bokeh_shape.lower()
         
         frames = []
         num_frames_int = int(num_animation_frames)
@@ -721,20 +866,38 @@ def process_spatial_photo(input_image, parallax_strength, aperture_f_number, num
                 fg_shift_x = fg_max_shift * (t_smooth - 0.5) * 2
                 bg_shift_x = bg_max_shift * (t_smooth - 0.5) * 2
             
+            # Dynamic zoom effect
+            if enable_zoom:
+                # Zoom from 1.10 at center to 1.05 at extremes
+                zoom_amount = abs(t_smooth - 0.5) * 2  # 0 at center, 1 at extremes
+                zoom_factor = 1.10 - zoom_amount * 0.05  # 1.10 to 1.05
+            else:
+                zoom_factor = 1.0
+            
+            # Apply zoom to original image
+            if zoom_factor != 1.0:
+                img_zoomed = apply_zoom_effect(img_np, zoom_factor)
+                clean_bg_zoomed = apply_zoom_effect(clean_bg, zoom_factor)
+            else:
+                img_zoomed = img_np
+                clean_bg_zoomed = clean_bg
+            
+            # Standard 2-layer processing
             fg_trans = np.float32([[1, 0, fg_shift_x], [0, 1, 0]])
             bg_trans = np.float32([[1, 0, bg_shift_x], [0, 1, 0]])
             
-            fg_shifted = cv2.warpAffine(img_np, fg_trans, (width, height),
+            fg_shifted = cv2.warpAffine(img_zoomed, fg_trans, (width, height),
                                         borderMode=cv2.BORDER_CONSTANT, borderValue=(0, 0, 0))
             fg_mask_shifted = cv2.warpAffine(fg_mask, fg_trans, (width, height),
                                             borderMode=cv2.BORDER_CONSTANT, borderValue=0)
-            bg_shifted = cv2.warpAffine(clean_bg, bg_trans, (width, height),
+            bg_shifted = cv2.warpAffine(clean_bg_zoomed, bg_trans, (width, height),
                                         borderMode=cv2.BORDER_REPLICATE)
             depth_shifted = cv2.warpAffine(depth_map_proc, bg_trans, (width, height),
                                           borderMode=cv2.BORDER_REPLICATE)
             
-            # Apply bokeh blur
-            bg_blurred = apply_depth_based_blur(bg_shifted, depth_shifted, fg_mask_shifted, aperture_conf)
+            # Apply custom bokeh blur
+            bg_blurred = apply_custom_bokeh_blur(bg_shifted, depth_shifted, fg_mask_shifted, 
+                                                 aperture_conf, bokeh_shape_lower)
             
             # Composite
             fg_mask_shifted_3ch = np.stack([fg_mask_shifted / 255.0] * 3, axis=-1)
@@ -797,7 +960,7 @@ with gr.Blocks(title="Spatial Photo Effect Generator", theme=gr.themes.Soft()) a
                 with gr.Row():
                     background_output = gr.Image(label="Background (Inpainted)", type="numpy", show_label=True)
     
-    gr.Markdown("### ⚙️ Parameters")
+    gr.Markdown("### ⚙️ Basic Parameters")
     
     with gr.Row():
         parallax_slider = gr.Slider(
@@ -806,7 +969,7 @@ with gr.Blocks(title="Spatial Photo Effect Generator", theme=gr.themes.Soft()) a
             value=1.5,
             step=0.1,
             label="Parallax Strength",
-            info="How much the foreground/background move differently (1.0=subtle, 3.0=dramatic)"
+            info="How much the foreground/background move differently"
         )
         
         aperture_slider = gr.Slider(
@@ -815,7 +978,7 @@ with gr.Blocks(title="Spatial Photo Effect Generator", theme=gr.themes.Soft()) a
             value=2.8,
             step=0.2,
             label="Aperture (f-stop)",
-            info="Camera aperture simulation (f/1.4=heavy blur, f/5.6=light blur)"
+            info="Camera aperture (lower=more blur)"
         )
         
         frames_slider = gr.Slider(
@@ -824,14 +987,39 @@ with gr.Blocks(title="Spatial Photo Effect Generator", theme=gr.themes.Soft()) a
             value=30,
             step=5,
             label="Animation Frames",
-            info="More frames = smoother but larger file"
+            info="More frames = smoother animation"
         )
         
         animation_style = gr.Radio(
             choices=["Back and Forth", "Continuous Loop"],
             value="Back and Forth",
             label="Animation Style",
-            info="Back and Forth: ping-pong motion, Continuous Loop: circular motion"
+            info="Motion pattern"
+        )
+    
+    gr.Markdown("### 🎨 Advanced Customization")
+    
+    with gr.Row():
+        bokeh_shape = gr.Radio(
+            choices=["Circular", "Hexagonal", "Heart"],
+            value="Circular",
+            label="Bokeh Shape",
+            info="Shape of out-of-focus blur"
+        )
+        
+        bokeh_strength = gr.Slider(
+            minimum=0.5,
+            maximum=2.0,
+            value=1.0,
+            step=0.1,
+            label="Bokeh Strength",
+            info="Intensity of blur effect"
+        )
+        
+        enable_zoom = gr.Checkbox(
+            value=False,
+            label="Dynamic Zoom Effect",
+            info="Zoom in/out during animation"
         )
     
     process_btn = gr.Button("✨ Generate Spatial Photo", variant="primary", size="lg")
@@ -840,40 +1028,56 @@ with gr.Blocks(title="Spatial Photo Effect Generator", theme=gr.themes.Soft()) a
     gr.Markdown("### 🎯 Try These Examples")
     gr.Examples(
         examples=[
-            [image_url, 1.5, 2.8, 30, "Back and Forth"],
-            [image_url, 2.0, 1.4, 25, "Back and Forth"],
-            [image_url, 1.2, 4.0, 20, "Continuous Loop"],
+            [image_url, 1.5, 2.8, 30, "Back and Forth", "Circular", 1.0, False],
+            [image_url, 2.0, 1.4, 25, "Back and Forth", "Hexagonal", 1.5, True],
+            [image_url, 1.2, 4.0, 20, "Continuous Loop", "Heart", 0.8, False],
         ],
-        inputs=[input_img, parallax_slider, aperture_slider, frames_slider, animation_style],
+        inputs=[input_img, parallax_slider, aperture_slider, frames_slider, animation_style,
+                bokeh_shape, bokeh_strength, enable_zoom],
         label="Quick Start Examples"
     )
     
-    gr.Markdown(
-        """
-        ### 💡 Tips for Best Results:
-        - **Portrait photos** work best (clear subject in foreground)
-        - **Good lighting** helps depth estimation accuracy
-        - **Simple backgrounds** produce cleaner results
-        - Lower **frame counts** for faster processing and smaller files
-        - **f/2.8** aperture is a good starting point for most images
-        
-        ### ⚡ Processing Info:
-        - Average processing time: 30-60 seconds
-        - GIF file size: automatically optimized to stay under 5MB
-        - All processing happens on your device
-        """
-    )
+    with gr.Row():
+        gr.Markdown(
+            """
+            ### 💡 Tips for Best Results:
+            - **Portrait photos** work best (clear subject in foreground)
+            - **Good lighting** helps depth estimation accuracy
+            - **Simple backgrounds** produce cleaner results
+            - **Dynamic zoom** adds cinematic feel but increases processing time
+            """
+        )
+
+        gr.Markdown(
+            """
+            ### 🎨 Bokeh Effects:
+            - **Circular**: Standard lens blur (fastest)
+            - **Hexagonal**: Camera aperture simulation (realistic)
+            - **Heart**: Creative artistic effect (unique)            
+            """
+        )
+
+        gr.Markdown(
+            """
+            ### ⚡ Processing Info:
+            - **Average time**: 30-90 seconds (varies with settings)
+            - **GIF file size**: automatically optimized to stay under 5MB
+            - **More frames** = longer processing time
+            """
+        )
     
     # Connect the button
-    def process_and_show(input_img, parallax_slider, aperture_slider, frames_slider, animation_style):
+    def process_and_show(input_img, parallax, aperture, frames, anim_style, bokeh, bokeh_str, zoom):
         """Wrapper function to process and make download visible"""
-        results = process_spatial_photo(input_img, parallax_slider, aperture_slider, frames_slider, animation_style)
+        results = process_spatial_photo(input_img, parallax, aperture, frames, anim_style, 
+                                       bokeh, zoom, bokeh_str)
         # Return results + update visibility of download section
         return results + (gr.update(visible=True),)
     
     process_btn.click(
         fn=process_and_show,
-        inputs=[input_img, parallax_slider, aperture_slider, frames_slider, animation_style],
+        inputs=[input_img, parallax_slider, aperture_slider, frames_slider, animation_style,
+                bokeh_shape, bokeh_strength, enable_zoom],
         outputs=[depth_output, foreground_output, background_output, output_gif_display, output_gif, output_gif]
     )
 
