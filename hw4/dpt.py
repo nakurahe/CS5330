@@ -18,14 +18,39 @@ import os
 # Initialize the Depth Model
 # ============================================
 print("Loading Intel DPT depth estimation model...")
-processor = DPTImageProcessor.from_pretrained("Intel/dpt-large")
-model = DPTForDepthEstimation.from_pretrained("Intel/dpt-large")
-model.eval()  # Set to evaluation mode
+print("This may take a minute if downloading for the first time...")
 
-# Use GPU if available for faster processing
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = model.to(device)
-print(f"Model loaded on {device}")
+# Retry logic for model loading (handles timeout issues)
+max_retries = 3
+retry_delay = 5  # seconds
+
+for attempt in range(max_retries):
+    try:
+        print(f"Attempt {attempt + 1}/{max_retries}...")
+        # Using hybrid model (smaller, faster: ~400MB instead of 1.3GB)
+        processor = DPTImageProcessor.from_pretrained("Intel/dpt-hybrid-midas", resume_download=True)
+        model = DPTForDepthEstimation.from_pretrained("Intel/dpt-hybrid-midas", resume_download=True)
+        model.eval()  # Set to evaluation mode
+        
+        # Use GPU if available for faster processing
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        model = model.to(device)
+        print(f"✓ Model loaded successfully on {device}")
+        break
+    except Exception as e:
+        print(f"✗ Attempt {attempt + 1} failed: {str(e)}")
+        if attempt < max_retries - 1:
+            print(f"Retrying in {retry_delay} seconds...")
+            import time
+            time.sleep(retry_delay)
+        else:
+            print("\n❌ Failed to load model after multiple attempts.")
+            print("Possible solutions:")
+            print("1. Check your internet connection")
+            print("2. Try again in a few minutes (HuggingFace servers may be busy)")
+            print("3. Set HF_HUB_OFFLINE=1 if model is already cached locally")
+            print("4. Use a different model: Intel/dpt-hybrid-midas (smaller, faster)")
+            raise
 
 # ============================================
 # Load and Prepare Your Image
@@ -1086,8 +1111,8 @@ print("Launching web interface...")
 
 # Launch the interface
 demo.launch(
-    share=False,  # Set to True to create a public link
+    share=True,  # Set to True to create a public link
     show_error=True,
-    server_name="localhost",
+    server_name="0.0.0.0",
     server_port=7860
 )
