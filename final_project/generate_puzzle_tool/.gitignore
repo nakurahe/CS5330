@@ -1,0 +1,22 @@
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# macOS
+.DS_Store
+
+# Output files (generated data)
+output_dataset/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
