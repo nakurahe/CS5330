@@ -1,0 +1,81 @@
+{
+  "scattered_image": "output_dataset/image_0035_people/scattered.png",
+  "canvas_size": [
+    1800,
+    1800
+  ],
+  "pieces_positions": [
+    {
+      "piece_id": 0,
+      "x": 309,
+      "y": 1313,
+      "rotation": -4.03809316509486,
+      "width": 322,
+      "height": 322
+    },
+    {
+      "piece_id": 1,
+      "x": 716,
+      "y": 1068,
+      "rotation": -0.009648987354353267,
+      "width": 302,
+      "height": 302
+    },
+    {
+      "piece_id": 2,
+      "x": 1125,
+      "y": 342,
+      "rotation": 0.1393133836236089,
+      "width": 302,
+      "height": 302
+    },
+    {
+      "piece_id": 3,
+      "x": 976,
+      "y": 1415,
+      "rotation": 2.7270448045961295,
+      "width": 314,
+      "height": 314
+    },
+    {
+      "piece_id": 4,
+      "x": 453,
+      "y": 712,
+      "rotation": 0.13453941721959595,
+      "width": 302,
+      "height": 302
+    },
+    {
+      "piece_id": 5,
+      "x": 412,
+      "y": 263,
+      "rotation": -7.979717234942795,
+      "width": 340,
+      "height": 340
+    },
+    {
+      "piece_id": 6,
+      "x": 1044,
+      "y": 729,
+      "rotation": 7.35141883494213,
+      "width": 336,
+      "height": 336
+    },
+    {
+      "piece_id": 7,
+      "x": 86,
+      "y": 659,
+      "rotation": 14.011961637486333,
+      "width": 364,
+      "height": 364
+    },
+    {
+      "piece_id": 8,
+      "x": 747,
+      "y": 79,
+      "rotation": -6.2531066040368195,
+      "width": 332,
+      "height": 332
+    }
+  ]
+}

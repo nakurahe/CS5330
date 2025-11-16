@@ -1,0 +1,81 @@
+{
+  "scattered_image": "output_dataset/image_0033_food/scattered.png",
+  "canvas_size": [
+    1800,
+    1800
+  ],
+  "pieces_positions": [
+    {
+      "piece_id": 0,
+      "x": 1368,
+      "y": 139,
+      "rotation": 11.679012050799919,
+      "width": 356,
+      "height": 356
+    },
+    {
+      "piece_id": 1,
+      "x": 1162,
+      "y": 761,
+      "rotation": 12.1299136826329,
+      "width": 358,
+      "height": 358
+    },
+    {
+      "piece_id": 2,
+      "x": 681,
+      "y": 513,
+      "rotation": -7.972638843978053,
+      "width": 340,
+      "height": 340
+    },
+    {
+      "piece_id": 3,
+      "x": 1248,
+      "y": 1326,
+      "rotation": -12.623173111062528,
+      "width": 360,
+      "height": 360
+    },
+    {
+      "piece_id": 4,
+      "x": 697,
+      "y": 1183,
+      "rotation": -7.173691335380791,
+      "width": 336,
+      "height": 336
+    },
+    {
+      "piece_id": 5,
+      "x": 270,
+      "y": 1229,
+      "rotation": -14.128832826494227,
+      "width": 366,
+      "height": 366
+    },
+    {
+      "piece_id": 6,
+      "x": 230,
+      "y": 101,
+      "rotation": -7.336439742428635,
+      "width": 336,
+      "height": 336
+    },
+    {
+      "piece_id": 7,
+      "x": 129,
+      "y": 818,
+      "rotation": 12.276201683140805,
+      "width": 358,
+      "height": 358
+    },
+    {
+      "piece_id": 8,
+      "x": 742,
+      "y": 279,
+      "rotation": 12.527741704157219,
+      "width": 358,
+      "height": 358
+    }
+  ]
+}

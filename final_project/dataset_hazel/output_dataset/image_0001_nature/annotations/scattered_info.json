@@ -1,0 +1,81 @@
+{
+  "scattered_image": "output_dataset/image_0001_nature/scattered.png",
+  "canvas_size": [
+    1800,
+    1800
+  ],
+  "pieces_positions": [
+    {
+      "piece_id": 0,
+      "x": 429,
+      "y": 81,
+      "rotation": 9.474422319031888,
+      "width": 346,
+      "height": 346
+    },
+    {
+      "piece_id": 1,
+      "x": 503,
+      "y": 964,
+      "rotation": -13.049851417493183,
+      "width": 360,
+      "height": 360
+    },
+    {
+      "piece_id": 2,
+      "x": 1339,
+      "y": 613,
+      "rotation": 9.298693378697461,
+      "width": 346,
+      "height": 346
+    },
+    {
+      "piece_id": 3,
+      "x": 985,
+      "y": 1292,
+      "rotation": -11.889066929162944,
+      "width": 356,
+      "height": 356
+    },
+    {
+      "piece_id": 4,
+      "x": 56,
+      "y": 638,
+      "rotation": 2.615714651171448,
+      "width": 314,
+      "height": 314
+    },
+    {
+      "piece_id": 5,
+      "x": 1349,
+      "y": 1144,
+      "rotation": -8.192870442722,
+      "width": 340,
+      "height": 340
+    },
+    {
+      "piece_id": 6,
+      "x": 781,
+      "y": 469,
+      "rotation": 12.394321840789253,
+      "width": 358,
+      "height": 358
+    },
+    {
+      "piece_id": 7,
+      "x": 875,
+      "y": 848,
+      "rotation": 6.501393353088236,
+      "width": 334,
+      "height": 334
+    },
+    {
+      "piece_id": 8,
+      "x": 54,
+      "y": 119,
+      "rotation": 11.092827699276185,
+      "width": 354,
+      "height": 354
+    }
+  ]
+}
