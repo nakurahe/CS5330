@@ -1,0 +1,4322 @@
+[
+  {
+    "puzzle_name": "image_0046_technology",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0046_technology_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0046_technology",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0046_technology_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0046_technology",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0046_technology_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0046_technology",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0046_technology_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0046_technology",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0046_technology_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0046_technology",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0046_technology_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0046_technology",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0046_technology_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0046_technology",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0046_technology_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0046_technology",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0046_technology_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0050_landscape",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0050_landscape_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0050_landscape",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0050_landscape_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0050_landscape",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0050_landscape_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0050_landscape",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0050_landscape_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0050_landscape",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0050_landscape_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0050_landscape",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0050_landscape_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0050_landscape",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0050_landscape_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0050_landscape",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0050_landscape_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0050_landscape",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0050_landscape_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0025_people",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0025_people_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0025_people",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0025_people_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0025_people",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0025_people_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0025_people",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0025_people_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0025_people",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0025_people_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0025_people",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0025_people_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0025_people",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0025_people_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0025_people",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0025_people_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0025_people",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0025_people_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0001_nature",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0001_nature_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0001_nature",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0001_nature_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0001_nature",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0001_nature_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0001_nature",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0001_nature_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0001_nature",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0001_nature_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0001_nature",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0001_nature_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0001_nature",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0001_nature_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0001_nature",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0001_nature_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0001_nature",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0001_nature_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0043_food",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0043_food_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0043_food",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0043_food_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0043_food",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0043_food_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0043_food",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0043_food_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0043_food",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0043_food_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0043_food",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0043_food_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0043_food",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0043_food_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0043_food",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0043_food_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0043_food",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0043_food_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0020_landscape",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0020_landscape_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0020_landscape",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0020_landscape_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0020_landscape",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0020_landscape_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0020_landscape",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0020_landscape_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0020_landscape",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0020_landscape_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0020_landscape",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0020_landscape_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0020_landscape",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0020_landscape_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0020_landscape",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0020_landscape_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0020_landscape",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0020_landscape_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0004_animals",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0004_animals_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0004_animals",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0004_animals_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0004_animals",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0004_animals_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0004_animals",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0004_animals_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0004_animals",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0004_animals_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0004_animals",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0004_animals_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0004_animals",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0004_animals_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0004_animals",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0004_animals_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0004_animals",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0004_animals_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0030_landscape",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0030_landscape_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0030_landscape",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0030_landscape_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0030_landscape",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0030_landscape_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0030_landscape",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0030_landscape_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0030_landscape",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0030_landscape_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0030_landscape",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0030_landscape_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0030_landscape",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0030_landscape_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0030_landscape",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0030_landscape_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0030_landscape",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0030_landscape_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0051_nature",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0051_nature_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0051_nature",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0051_nature_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0051_nature",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0051_nature_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0051_nature",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0051_nature_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0051_nature",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0051_nature_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0051_nature",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0051_nature_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0051_nature",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0051_nature_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0051_nature",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0051_nature_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0051_nature",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0051_nature_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0018_art",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0018_art_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0018_art",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0018_art_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0018_art",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0018_art_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0018_art",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0018_art_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0018_art",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0018_art_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0018_art",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0018_art_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0018_art",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0018_art_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0018_art",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0018_art_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0018_art",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0018_art_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0008_art",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0008_art_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0008_art",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0008_art_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0008_art",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0008_art_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0008_art",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0008_art_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0008_art",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0008_art_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0008_art",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0008_art_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0008_art",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0008_art_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0008_art",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0008_art_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0008_art",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0008_art_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0014_animals",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0014_animals_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0014_animals",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0014_animals_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0014_animals",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0014_animals_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0014_animals",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0014_animals_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0014_animals",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0014_animals_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0014_animals",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0014_animals_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0014_animals",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0014_animals_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0014_animals",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0014_animals_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0014_animals",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0014_animals_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0019_city",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0019_city_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0019_city",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0019_city_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0019_city",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0019_city_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0019_city",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0019_city_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0019_city",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0019_city_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0019_city",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0019_city_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0019_city",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0019_city_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0019_city",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0019_city_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0019_city",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0019_city_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0040_landscape",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0040_landscape_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0040_landscape",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0040_landscape_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0040_landscape",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0040_landscape_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0040_landscape",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0040_landscape_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0040_landscape",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0040_landscape_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0040_landscape",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0040_landscape_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0040_landscape",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0040_landscape_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0040_landscape",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0040_landscape_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0040_landscape",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0040_landscape_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0036_technology",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0036_technology_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0036_technology",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0036_technology_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0036_technology",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0036_technology_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0036_technology",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0036_technology_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0036_technology",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0036_technology_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0036_technology",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0036_technology_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0036_technology",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0036_technology_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0036_technology",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0036_technology_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0036_technology",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0036_technology_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0023_food",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0023_food_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0023_food",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0023_food_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0023_food",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0023_food_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0023_food",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0023_food_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0023_food",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0023_food_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0023_food",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0023_food_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0023_food",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0023_food_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0023_food",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0023_food_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0023_food",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0023_food_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0045_people",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0045_people_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0045_people",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0045_people_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0045_people",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0045_people_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0045_people",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0045_people_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0045_people",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0045_people_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0045_people",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0045_people_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0045_people",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0045_people_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0045_people",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0045_people_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0045_people",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0045_people_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0017_abstract",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0017_abstract_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0017_abstract",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0017_abstract_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0017_abstract",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0017_abstract_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0017_abstract",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0017_abstract_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0017_abstract",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0017_abstract_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0017_abstract",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0017_abstract_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0017_abstract",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0017_abstract_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0017_abstract",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0017_abstract_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0017_abstract",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0017_abstract_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0060_landscape",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0060_landscape_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0060_landscape",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0060_landscape_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0060_landscape",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0060_landscape_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0060_landscape",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0060_landscape_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0060_landscape",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0060_landscape_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0060_landscape",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0060_landscape_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0060_landscape",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0060_landscape_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0060_landscape",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0060_landscape_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0060_landscape",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0060_landscape_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0057_abstract",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0057_abstract_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0057_abstract",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0057_abstract_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0057_abstract",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0057_abstract_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0057_abstract",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0057_abstract_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0057_abstract",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0057_abstract_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0057_abstract",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0057_abstract_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0057_abstract",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0057_abstract_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0057_abstract",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0057_abstract_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0057_abstract",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0057_abstract_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0053_food",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0053_food_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0053_food",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0053_food_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0053_food",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0053_food_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0053_food",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0053_food_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0053_food",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0053_food_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0053_food",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0053_food_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0053_food",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0053_food_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0053_food",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0053_food_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0053_food",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0053_food_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0010_landscape",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0010_landscape_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0010_landscape",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0010_landscape_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0010_landscape",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0010_landscape_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0010_landscape",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0010_landscape_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0010_landscape",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0010_landscape_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0010_landscape",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0010_landscape_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0010_landscape",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0010_landscape_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0010_landscape",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0010_landscape_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0010_landscape",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0010_landscape_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0026_technology",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0026_technology_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0026_technology",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0026_technology_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0026_technology",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0026_technology_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0026_technology",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0026_technology_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0026_technology",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0026_technology_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0026_technology",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0026_technology_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0026_technology",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0026_technology_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0026_technology",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0026_technology_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0026_technology",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0026_technology_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0056_technology",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0056_technology_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0056_technology",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0056_technology_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0056_technology",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0056_technology_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0056_technology",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0056_technology_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0056_technology",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0056_technology_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0056_technology",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0056_technology_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0056_technology",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0056_technology_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0056_technology",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0056_technology_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0056_technology",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0056_technology_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0031_nature",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0031_nature_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0031_nature",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0031_nature_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0031_nature",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0031_nature_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0031_nature",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0031_nature_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0031_nature",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0031_nature_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0031_nature",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0031_nature_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0031_nature",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0031_nature_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0031_nature",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0031_nature_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0031_nature",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0031_nature_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0027_abstract",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0027_abstract_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0027_abstract",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0027_abstract_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0027_abstract",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0027_abstract_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0027_abstract",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0027_abstract_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0027_abstract",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0027_abstract_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0027_abstract",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0027_abstract_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0027_abstract",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0027_abstract_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0027_abstract",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0027_abstract_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0027_abstract",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0027_abstract_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0009_city",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0009_city_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0009_city",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0009_city_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0009_city",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0009_city_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0009_city",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0009_city_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0009_city",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0009_city_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0009_city",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0009_city_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0009_city",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0009_city_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0009_city",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0009_city_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0009_city",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0009_city_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0015_people",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0015_people_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0015_people",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0015_people_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0015_people",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0015_people_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0015_people",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0015_people_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0015_people",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0015_people_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0015_people",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0015_people_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0015_people",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0015_people_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0015_people",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0015_people_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0015_people",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0015_people_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0033_food",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0033_food_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0033_food",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0033_food_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0033_food",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0033_food_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0033_food",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0033_food_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0033_food",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0033_food_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0033_food",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0033_food_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0033_food",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0033_food_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0033_food",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0033_food_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0033_food",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0033_food_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0059_city",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0059_city_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0059_city",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0059_city_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0059_city",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0059_city_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0059_city",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0059_city_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0059_city",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0059_city_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0059_city",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0059_city_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0059_city",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0059_city_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0059_city",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0059_city_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0059_city",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0059_city_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0032_architecture",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0032_architecture_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0032_architecture",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0032_architecture_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0032_architecture",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0032_architecture_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0032_architecture",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0032_architecture_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0032_architecture",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0032_architecture_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0032_architecture",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0032_architecture_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0032_architecture",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0032_architecture_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0032_architecture",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0032_architecture_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0032_architecture",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0032_architecture_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0006_technology",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0006_technology_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0006_technology",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0006_technology_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0006_technology",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0006_technology_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0006_technology",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0006_technology_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0006_technology",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0006_technology_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0006_technology",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0006_technology_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0006_technology",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0006_technology_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0006_technology",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0006_technology_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0006_technology",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0006_technology_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0041_nature",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0041_nature_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0041_nature",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0041_nature_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0041_nature",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0041_nature_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0041_nature",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0041_nature_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0041_nature",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0041_nature_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0041_nature",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0041_nature_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0041_nature",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0041_nature_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0041_nature",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0041_nature_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0041_nature",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0041_nature_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0037_abstract",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0037_abstract_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0037_abstract",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0037_abstract_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0037_abstract",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0037_abstract_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0037_abstract",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0037_abstract_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0037_abstract",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0037_abstract_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0037_abstract",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0037_abstract_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0037_abstract",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0037_abstract_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0037_abstract",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0037_abstract_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0037_abstract",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0037_abstract_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0028_art",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0028_art_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0028_art",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0028_art_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0028_art",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0028_art_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0028_art",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0028_art_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0028_art",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0028_art_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0028_art",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0028_art_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0028_art",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0028_art_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0028_art",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0028_art_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0028_art",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0028_art_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0038_art",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0038_art_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0038_art",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0038_art_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0038_art",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0038_art_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0038_art",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0038_art_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0038_art",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0038_art_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0038_art",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0038_art_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0038_art",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0038_art_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0038_art",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0038_art_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0038_art",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0038_art_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0047_abstract",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0047_abstract_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0047_abstract",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0047_abstract_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0047_abstract",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0047_abstract_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0047_abstract",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0047_abstract_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0047_abstract",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0047_abstract_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0047_abstract",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0047_abstract_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0047_abstract",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0047_abstract_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0047_abstract",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0047_abstract_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0047_abstract",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0047_abstract_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0011_nature",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0011_nature_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0011_nature",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0011_nature_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0011_nature",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0011_nature_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0011_nature",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0011_nature_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0011_nature",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0011_nature_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0011_nature",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0011_nature_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0011_nature",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0011_nature_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0011_nature",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0011_nature_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0011_nature",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0011_nature_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0007_abstract",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0007_abstract_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0007_abstract",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0007_abstract_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0007_abstract",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0007_abstract_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0007_abstract",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0007_abstract_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0007_abstract",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0007_abstract_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0007_abstract",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0007_abstract_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0007_abstract",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0007_abstract_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0007_abstract",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0007_abstract_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0007_abstract",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0007_abstract_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0035_people",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0035_people_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0035_people",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0035_people_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0035_people",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0035_people_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0035_people",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0035_people_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0035_people",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0035_people_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0035_people",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0035_people_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0035_people",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0035_people_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0035_people",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0035_people_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0035_people",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0035_people_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0003_food",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0003_food_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0003_food",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0003_food_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0003_food",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0003_food_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0003_food",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0003_food_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0003_food",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0003_food_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0003_food",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0003_food_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0003_food",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0003_food_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0003_food",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0003_food_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0003_food",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0003_food_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0022_architecture",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0022_architecture_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0022_architecture",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0022_architecture_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0022_architecture",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0022_architecture_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0022_architecture",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0022_architecture_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0022_architecture",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0022_architecture_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0022_architecture",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0022_architecture_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0022_architecture",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0022_architecture_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0022_architecture",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0022_architecture_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0022_architecture",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0022_architecture_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0039_city",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0039_city_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0039_city",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0039_city_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0039_city",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0039_city_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0039_city",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0039_city_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0039_city",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0039_city_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0039_city",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0039_city_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0039_city",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0039_city_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0039_city",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0039_city_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0039_city",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0039_city_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0042_architecture",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0042_architecture_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0042_architecture",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0042_architecture_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0042_architecture",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0042_architecture_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0042_architecture",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0042_architecture_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0042_architecture",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0042_architecture_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0042_architecture",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0042_architecture_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0042_architecture",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0042_architecture_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0042_architecture",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0042_architecture_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0042_architecture",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0042_architecture_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0005_people",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0005_people_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0005_people",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0005_people_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0005_people",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0005_people_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0005_people",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0005_people_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0005_people",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0005_people_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0005_people",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0005_people_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0005_people",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0005_people_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0005_people",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0005_people_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0005_people",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0005_people_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0044_animals",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0044_animals_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0044_animals",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0044_animals_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0044_animals",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0044_animals_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0044_animals",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0044_animals_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0044_animals",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0044_animals_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0044_animals",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0044_animals_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0044_animals",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0044_animals_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0044_animals",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0044_animals_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0044_animals",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0044_animals_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0012_architecture",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0012_architecture_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0012_architecture",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0012_architecture_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0012_architecture",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0012_architecture_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0012_architecture",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0012_architecture_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0012_architecture",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0012_architecture_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0012_architecture",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0012_architecture_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0012_architecture",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0012_architecture_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0012_architecture",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0012_architecture_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0012_architecture",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0012_architecture_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0049_city",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0049_city_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0049_city",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0049_city_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0049_city",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0049_city_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0049_city",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0049_city_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0049_city",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0049_city_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0049_city",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0049_city_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0049_city",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0049_city_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0049_city",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0049_city_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0049_city",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0049_city_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0021_nature",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0021_nature_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0021_nature",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0021_nature_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0021_nature",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0021_nature_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0021_nature",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0021_nature_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0021_nature",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0021_nature_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0021_nature",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0021_nature_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0021_nature",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0021_nature_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0021_nature",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0021_nature_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0021_nature",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0021_nature_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0034_animals",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0034_animals_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0034_animals",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0034_animals_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0034_animals",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0034_animals_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0034_animals",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0034_animals_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0034_animals",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0034_animals_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0034_animals",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0034_animals_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0034_animals",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0034_animals_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0034_animals",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0034_animals_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0034_animals",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0034_animals_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0052_architecture",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0052_architecture_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0052_architecture",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0052_architecture_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0052_architecture",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0052_architecture_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0052_architecture",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0052_architecture_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0052_architecture",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0052_architecture_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0052_architecture",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0052_architecture_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0052_architecture",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0052_architecture_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0052_architecture",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0052_architecture_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0052_architecture",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0052_architecture_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0016_technology",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0016_technology_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0016_technology",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0016_technology_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0016_technology",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0016_technology_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0016_technology",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0016_technology_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0016_technology",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0016_technology_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0016_technology",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0016_technology_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0016_technology",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0016_technology_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0016_technology",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0016_technology_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0016_technology",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0016_technology_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0002_architecture",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0002_architecture_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0002_architecture",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0002_architecture_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0002_architecture",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0002_architecture_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0002_architecture",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0002_architecture_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0002_architecture",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0002_architecture_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0002_architecture",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0002_architecture_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0002_architecture",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0002_architecture_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0002_architecture",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0002_architecture_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0002_architecture",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0002_architecture_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0013_food",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0013_food_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0013_food",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0013_food_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0013_food",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0013_food_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0013_food",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0013_food_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0013_food",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0013_food_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0013_food",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0013_food_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0013_food",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0013_food_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0013_food",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0013_food_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0013_food",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0013_food_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0055_people",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0055_people_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0055_people",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0055_people_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0055_people",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0055_people_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0055_people",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0055_people_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0055_people",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0055_people_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0055_people",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0055_people_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0055_people",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0055_people_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0055_people",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0055_people_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0055_people",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0055_people_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0024_animals",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0024_animals_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0024_animals",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0024_animals_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0024_animals",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0024_animals_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0024_animals",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0024_animals_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0024_animals",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0024_animals_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0024_animals",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0024_animals_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0024_animals",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0024_animals_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0024_animals",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0024_animals_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0024_animals",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0024_animals_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0058_art",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0058_art_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0058_art",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0058_art_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0058_art",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0058_art_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0058_art",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0058_art_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0058_art",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0058_art_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0058_art",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0058_art_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0058_art",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0058_art_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0058_art",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0058_art_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0058_art",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0058_art_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0048_art",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0048_art_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0048_art",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0048_art_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0048_art",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0048_art_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0048_art",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0048_art_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0048_art",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0048_art_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0048_art",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0048_art_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0048_art",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0048_art_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0048_art",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0048_art_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0048_art",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0048_art_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0054_animals",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0054_animals_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0054_animals",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0054_animals_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0054_animals",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0054_animals_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0054_animals",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0054_animals_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0054_animals",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0054_animals_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0054_animals",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0054_animals_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0054_animals",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0054_animals_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0054_animals",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0054_animals_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0054_animals",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0054_animals_piece_8.png"
+  },
+  {
+    "puzzle_name": "image_0029_city",
+    "piece_id": 0,
+    "row": 0,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0029_city_piece_0.png"
+  },
+  {
+    "puzzle_name": "image_0029_city",
+    "piece_id": 1,
+    "row": 0,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0029_city_piece_1.png"
+  },
+  {
+    "puzzle_name": "image_0029_city",
+    "piece_id": 2,
+    "row": 0,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0029_city_piece_2.png"
+  },
+  {
+    "puzzle_name": "image_0029_city",
+    "piece_id": 3,
+    "row": 1,
+    "col": 0,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0029_city_piece_3.png"
+  },
+  {
+    "puzzle_name": "image_0029_city",
+    "piece_id": 4,
+    "row": 1,
+    "col": 1,
+    "type": "interior",
+    "path": "output_dataset/cnn_dataset/classification/interior/image_0029_city_piece_4.png"
+  },
+  {
+    "puzzle_name": "image_0029_city",
+    "piece_id": 5,
+    "row": 1,
+    "col": 2,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0029_city_piece_5.png"
+  },
+  {
+    "puzzle_name": "image_0029_city",
+    "piece_id": 6,
+    "row": 2,
+    "col": 0,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0029_city_piece_6.png"
+  },
+  {
+    "puzzle_name": "image_0029_city",
+    "piece_id": 7,
+    "row": 2,
+    "col": 1,
+    "type": "edge",
+    "path": "output_dataset/cnn_dataset/classification/edge/image_0029_city_piece_7.png"
+  },
+  {
+    "puzzle_name": "image_0029_city",
+    "piece_id": 8,
+    "row": 2,
+    "col": 2,
+    "type": "corner",
+    "path": "output_dataset/cnn_dataset/classification/corner/image_0029_city_piece_8.png"
+  }
+]

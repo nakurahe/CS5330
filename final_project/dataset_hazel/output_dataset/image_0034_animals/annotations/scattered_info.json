@@ -1,0 +1,81 @@
+{
+  "scattered_image": "output_dataset/image_0034_animals/scattered.png",
+  "canvas_size": [
+    1800,
+    1800
+  ],
+  "pieces_positions": [
+    {
+      "piece_id": 0,
+      "x": 1031,
+      "y": 237,
+      "rotation": -10.589415289342801,
+      "width": 352,
+      "height": 352
+    },
+    {
+      "piece_id": 1,
+      "x": 293,
+      "y": 1004,
+      "rotation": -7.573298310237081,
+      "width": 338,
+      "height": 338
+    },
+    {
+      "piece_id": 2,
+      "x": 612,
+      "y": 814,
+      "rotation": -3.163067705051702,
+      "width": 318,
+      "height": 318
+    },
+    {
+      "piece_id": 3,
+      "x": 1415,
+      "y": 1190,
+      "rotation": -1.9703915758649853,
+      "width": 312,
+      "height": 312
+    },
+    {
+      "piece_id": 4,
+      "x": 359,
+      "y": 417,
+      "rotation": 9.374121256251165,
+      "width": 346,
+      "height": 346
+    },
+    {
+      "piece_id": 5,
+      "x": 1440,
+      "y": 703,
+      "rotation": 0.8432369519580849,
+      "width": 306,
+      "height": 306
+    },
+    {
+      "piece_id": 6,
+      "x": 1083,
+      "y": 627,
+      "rotation": 4.196360846437404,
+      "width": 322,
+      "height": 322
+    },
+    {
+      "piece_id": 7,
+      "x": 482,
+      "y": 1352,
+      "rotation": -3.594607914915631,
+      "width": 320,
+      "height": 320
+    },
+    {
+      "piece_id": 8,
+      "x": 889,
+      "y": 1266,
+      "rotation": -14.812404888109471,
+      "width": 368,
+      "height": 368
+    }
+  ]
+}

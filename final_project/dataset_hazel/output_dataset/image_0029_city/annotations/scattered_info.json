@@ -1,0 +1,81 @@
+{
+  "scattered_image": "output_dataset/image_0029_city/scattered.png",
+  "canvas_size": [
+    1800,
+    1800
+  ],
+  "pieces_positions": [
+    {
+      "piece_id": 0,
+      "x": 1107,
+      "y": 1345,
+      "rotation": -6.760511508590328,
+      "width": 334,
+      "height": 334
+    },
+    {
+      "piece_id": 1,
+      "x": 553,
+      "y": 1206,
+      "rotation": -1.9079277714982226,
+      "width": 310,
+      "height": 310
+    },
+    {
+      "piece_id": 2,
+      "x": 391,
+      "y": 406,
+      "rotation": -10.411109052611874,
+      "width": 350,
+      "height": 350
+    },
+    {
+      "piece_id": 3,
+      "x": 163,
+      "y": 1021,
+      "rotation": -12.138412391458445,
+      "width": 358,
+      "height": 358
+    },
+    {
+      "piece_id": 4,
+      "x": 1077,
+      "y": 544,
+      "rotation": 7.173185765183103,
+      "width": 336,
+      "height": 336
+    },
+    {
+      "piece_id": 5,
+      "x": 1036,
+      "y": 138,
+      "rotation": -12.723811257272304,
+      "width": 360,
+      "height": 360
+    },
+    {
+      "piece_id": 6,
+      "x": 519,
+      "y": 72,
+      "rotation": -6.1876885595156,
+      "width": 332,
+      "height": 332
+    },
+    {
+      "piece_id": 7,
+      "x": 976,
+      "y": 949,
+      "rotation": -10.085781536769755,
+      "width": 348,
+      "height": 348
+    },
+    {
+      "piece_id": 8,
+      "x": 385,
+      "y": 425,
+      "rotation": -10.731705028670913,
+      "width": 352,
+      "height": 352
+    }
+  ]
+}
