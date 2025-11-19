@@ -1,0 +1,13 @@
+# all images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.svg
+*.ico
+*.webp
+
+# certain datasets
+dataset_hazel/
