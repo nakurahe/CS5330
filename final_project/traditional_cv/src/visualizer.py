@@ -5,7 +5,7 @@ Creates annotated images showing puzzle solution with assembly instructions.
 
 import cv2
 import numpy as np
-from typing import List, Tuple
+from typing import List, Optional
 import logging
 
 logger = logging.getLogger(__name__)
@@ -24,7 +24,7 @@ class PuzzleVisualizer:
             (255, 0, 255),  # Magenta
             (255, 255, 0),  # Cyan
             (128, 0, 128),  # Purple
-            (255, 165, 0),  # Orange
+            (0, 165, 255),  # Orange
         ]
     
     def create_solution_visualization(self, original_image: np.ndarray, 
@@ -64,8 +64,7 @@ class PuzzleVisualizer:
             logger.info(f"Saved: {recon_path}")
         
         # 3. Step-by-step assembly visualization
-        step_images = self.create_assembly_steps(original_image, pieces, 
-                                                 assembly_steps, grid)
+        step_images = self.create_assembly_steps(pieces, assembly_steps, grid)
         for i, step_img in enumerate(step_images[:10]):  # Save first 10 steps
             step_path = f"{output_prefix}_3_step_{i+1:02d}.jpg"
             cv2.imwrite(step_path, step_img)
@@ -120,7 +119,7 @@ class PuzzleVisualizer:
         
         return annotated
     
-    def reconstruct_puzzle(self, pieces: List, grid) -> np.ndarray:
+    def reconstruct_puzzle(self, pieces: List, grid) -> Optional[np.ndarray]:
         """
         Reconstruct the solved puzzle from pieces.
         
@@ -129,7 +128,7 @@ class PuzzleVisualizer:
             grid: PuzzleGrid with solution
             
         Returns:
-            Reconstructed puzzle image
+            Reconstructed puzzle image, or None if grid is empty
         """
         if len(grid.grid) == 0:
             logger.warning("Grid is empty, cannot reconstruct puzzle")
@@ -189,13 +188,14 @@ class PuzzleVisualizer:
         
         return reconstructed
     
-    def create_assembly_steps(self, original_image: np.ndarray, pieces: List,
-                              assembly_steps: List, grid) -> List[np.ndarray]:
+    def create_assembly_steps(self, pieces: List, assembly_steps: List, 
+                              grid) -> List[np.ndarray]:
         """
         Create step-by-step assembly visualization.
         
+        Shows partial reconstruction with the current piece highlighted.
+        
         Args:
-            original_image: Original image
             pieces: List of PuzzlePiece objects
             assembly_steps: List of AssemblyStep objects
             grid: PuzzleGrid
@@ -211,40 +211,24 @@ class PuzzleVisualizer:
         avg_width = int(np.mean([s[0] for s in piece_sizes]))
         avg_height = int(np.mean([s[1] for s in piece_sizes]))
         
+        # Output dimensions
+        output_height = grid.rows * avg_height
+        output_width = grid.cols * avg_width
+        
         for step_idx, step in enumerate(assembly_steps):
-            # Create side-by-side view
-            # Left: original with current piece highlighted
-            # Right: partial reconstruction
+            # Create reconstruction image
+            canvas = np.ones((output_height, output_width, 3), dtype=np.uint8) * 200
             
-            left = original_image.copy()
-            
-            # Highlight current piece
-            if step.piece_id in piece_dict:
-                piece = piece_dict[step.piece_id]
-                color = (0, 0, 255)  # Red for current piece
-                cv2.drawContours(left, [piece.contour], 0, color, 5)
-                
-                cx, cy = piece.centroid
-                cv2.circle(left, (int(cx), int(cy)), 30, color, -1)
-                cv2.putText(left, str(step.piece_id), 
-                           (int(cx) - 15, int(cy) + 10),
-                           cv2.FONT_HERSHEY_SIMPLEX, 1.0, (255, 255, 255), 2)
-            
-            # Create partial reconstruction up to this step
-            output_height = grid.rows * avg_height
-            output_width = grid.cols * avg_width
-            right = np.ones((output_height, output_width, 3), dtype=np.uint8) * 200
-            
-            # Draw grid
+            # Draw grid lines
             for i in range(grid.rows + 1):
                 y = i * avg_height
-                cv2.line(right, (0, y), (output_width, y), (150, 150, 150), 1)
+                cv2.line(canvas, (0, y), (output_width, y), (150, 150, 150), 1)
             for j in range(grid.cols + 1):
                 x = j * avg_width
-                cv2.line(right, (x, 0), (x, output_height), (150, 150, 150), 1)
+                cv2.line(canvas, (x, 0), (x, output_height), (150, 150, 150), 1)
             
             # Place pieces up to current step
-            for prev_step in assembly_steps[:step_idx + 1]:
+            for prev_idx, prev_step in enumerate(assembly_steps[:step_idx + 1]):
                 row, col = prev_step.row, prev_step.col
                 piece_id = prev_step.piece_id
                 
@@ -269,29 +253,27 @@ class PuzzleVisualizer:
                 mask_crop = mask_resized[:piece_h, :piece_w]
                 
                 for c in range(3):
-                    right[y_start:y_end, x_start:x_end, c] = \
+                    canvas[y_start:y_end, x_start:x_end, c] = \
                         np.where(mask_crop > 0, piece_crop[:, :, c],
-                                right[y_start:y_end, x_start:x_end, c])
+                                canvas[y_start:y_end, x_start:x_end, c])
+                
+                # Highlight the current piece with a colored border
+                if prev_idx == step_idx:
+                    cv2.rectangle(canvas, (x_start, y_start), (x_end - 1, y_end - 1),
+                                 (0, 0, 255), 4)  # Red border for current piece
             
-            # Highlight target position with arrow
-            target_y = (step.row + 0.5) * avg_height
-            target_x = (step.col + 0.5) * avg_width
-            cv2.circle(right, (int(target_x), int(target_y)), 15, (0, 255, 0), 3)
+            # Add piece number label on current piece
+            target_y = int((step.row + 0.5) * avg_height)
+            target_x = int((step.col + 0.5) * avg_width)
+            cv2.putText(canvas, f"#{step.piece_id}", (target_x - 20, target_y + 10),
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
             
-            # Resize images to same height
-            max_height = max(left.shape[0], right.shape[0])
-            left_resized = cv2.resize(left, (int(left.shape[1] * max_height / left.shape[0]), max_height))
-            right_resized = cv2.resize(right, (int(right.shape[1] * max_height / right.shape[0]), max_height))
+            # Add text instruction at top
+            instruction = f"Step {step_idx + 1}: Place piece #{step.piece_id} at ({step.row}, {step.col})"
+            cv2.putText(canvas, instruction, (10, 30),
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 2)
             
-            # Concatenate
-            combined = np.hstack([left_resized, right_resized])
-            
-            # Add text instruction
-            instruction = f"Step {step_idx + 1}: Place piece #{step.piece_id} at position ({step.row}, {step.col})"
-            cv2.putText(combined, instruction, (10, 40),
-                       cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
-            
-            step_images.append(combined)
+            step_images.append(canvas)
         
         return step_images
     
@@ -317,12 +299,3 @@ class PuzzleVisualizer:
             
             f.write("=" * 50 + "\n")
             f.write(f"Total steps: {len(assembly_steps)}\n")
-
-
-def main():
-    """Test visualizer."""
-    pass
-
-
-if __name__ == "__main__":
-    main()
